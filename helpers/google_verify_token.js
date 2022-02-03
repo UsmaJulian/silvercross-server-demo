@@ -20,6 +20,9 @@ const validateGoogleIdToken = async (token) => {
     //   console.log(payload);
     // If request specified a G Suite domain:
     // const domain = payload['hd'];
+
+    console.log("==========================PAYLOAD==========================");
+    console.log(payload);
     return {
       name: payload["name"],
       email: payload["email"],
