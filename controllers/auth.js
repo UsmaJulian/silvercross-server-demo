@@ -58,7 +58,7 @@ const signInWithApple = async (request, response) => {
         "https://apple-google-signin-serv.herokuapp.com/callbacks/sign_in_with_apple", // does not matter here, as this is already the callback that verifies the token after the redirection
       key_id: process.env.KEY_ID,
     },
-    fs.readFileSync("../keys/AuthKey_MKN4A7QNX5.p8").toString(),
+    process.env.KEY_CONTENTS.replace(/\|/g, "\n"),
     "text"
   );
 
